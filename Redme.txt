@@ -1,0 +1,77 @@
+# e-Bike Store - Projeto de E-commerce de Bicicletas
+
+## 1. Descrição do Projeto
+
+Este é o código-fonte de um site de e-commerce moderno e responsivo para uma loja de bicicletas e acessórios chamada "e-Bike Store". O projeto foi desenvolvido com base em um prompt detalhado, focando em uma experiência de usuário limpa, navegação intuitiva e um design que valoriza imagens de alta qualidade para inspirar o estilo de vida do ciclismo.
+
+Este é um projeto de **frontend estático**, ou seja, não possui um banco de dados ou funcionalidades de backend (como processamento de pagamento real). Ele serve como um protótipo funcional e a base visual completa para uma futura implementação com uma plataforma de e-commerce.
+
+## 2. Funcionalidades Implementadas
+
+-   **Página Inicial (Home):** Vitrine com banner principal, carrossel de produtos (Mais Vendidos e Novidades).
+-   **Página de Catálogo:** Grade de produtos com sistema de filtros (sidebar) e ordenação.
+-   **Página de Produto:** Layout detalhado com galeria de imagens, descrição, especificações técnicas, avaliações e botão de "Adicionar ao Carrinho".
+-   **Página Institucional (Quem Somos):** Apresentação da história, missão, visão e valores da empresa.
+-   **Seção de Blog:**
+    -   Página principal do blog com uma lista de artigos.
+    -   Página de artigo individual com layout focado em leitura.
+-   **Design Responsivo:** O site se adapta a desktops, tablets e smartphones.
+-   **Componentes Essenciais:** Cabeçalho com navegação e busca, e um rodapé completo com informações de contato e redes sociais.
+
+## 3. Tecnologias Utilizadas
+
+-   **HTML5:** Para a estrutura e semântica do site.
+-   **CSS3:** Para toda a estilização, layout (usando Flexbox e Grid) e responsividade.
+-   **Dependências Externas (via CDN):**
+    -   **Google Fonts:** Para as fontes 'Roboto' e 'Poppins'.
+    -   **Font Awesome:** Para os ícones utilizados no site.
+    *Não é necessário instalar nenhuma dependência localmente, pois elas são carregadas diretamente no navegador.*
+
+## 4. Estrutura do Projeto
+
+```
+/site_bicicletas/
+|
+|-- index.html           # Página Inicial
+|-- catalogo.html        # Página de Catálogo de Produtos
+|-- produto.html         # Página de Detalhes do Produto
+|-- quemsomos.html       # Página Institucional "Quem Somos"
+|-- blog.html            # Página principal do Blog
+|-- artigo.html          # Página de um Artigo individual
+|-- style.css            # Folha de estilos principal
+|-- README.md            # Esta documentação
+|
+|-- /images/             # Pasta para armazenar as imagens do site
+```
+
+## 5. Guia de Implantação Local com XAMPP
+
+Siga estes passos para rodar o site em seu computador local (`localhost`).
+
+### Pré-requisitos
+- Ter o [XAMPP](https://www.apachefriends.org/pt_br/index.html) instalado em seu computador. O XAMPP é um pacote que inclui o servidor web Apache, essencial para rodar o site.
+
+### Passo a Passo
+
+**Passo 1: Iniciar o Servidor Apache**
+- Abra o Painel de Controle do XAMPP.
+- Ao lado do módulo **Apache**, clique no botão **Start**. Ele deve ficar com o fundo verde, indicando que o servidor está ativo.
+
+**Passo 2: Localizar a Pasta `htdocs`**
+- No Painel de Controle do XAMPP, clique no botão **Explorer**.
+- Isso abrirá a pasta onde o XAMPP foi instalado. Navegue até a pasta `htdocs`.
+- **O caminho geralmente é `C:/xampp/htdocs/` no Windows.**
+
+**Passo 3: Copiar os Arquivos do Projeto**
+- Copie toda a pasta `site_bicicletas` (com todos os arquivos .html e .css dentro dela) para dentro da pasta `htdocs`.
+- A estrutura final deverá ser: `C:/xampp/htdocs/site_bicicletas/`.
+
+**Passo 4: Acessar o Site no Navegador**
+- Abra seu navegador de internet (Google Chrome, Firefox, etc.).
+- Na barra de endereço, digite a seguinte URL e pressione Enter:
+  ```
+  http://localhost/site_bicicletas/
+  ```
+- O navegador irá carregar o arquivo `index.html` automaticamente e a página inicial do site será exibida.
+
+**Pronto!** O site "e-Bike Store" está agora rodando em seu ambiente local. Você pode navegar por todas as páginas clicando nos links do menu.

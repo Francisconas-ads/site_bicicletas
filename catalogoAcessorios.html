@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Bicicletas - e-Bike Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="e-Bike Store - Logo da empresa" class="logo-image">
+            </a>
+            <nav class="main-nav">
+                <a href="catalogoBicicletas.html">Bicicletas</a>
+                <a href="catalogoPecas.html">Peças</a>
+                <a href="catalogoAcessorios.html">Acessórios</a>
+                <a href="blog.html">Blog</a>
+                <a href="quemsomos.html">Quem Somos</a>
+            </nav>
+            <div class="header-icons">
+                <div class="search-box">
+                    <input type="search" placeholder="Buscar produto...">
+                    <button type="submit" title="Buscar produto">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <a href="#" class="icon-link">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="container page-content">
+        <header class="catalog-header">
+            <h1>Acessórios</h1>
+            <div class="sorting-options">
+                <label for="sort">Ordenar por:</label>
+                <select name="sort" id="sort">
+                    <option value="popularity">Popularidade</option>
+                    <option value="price-asc">Menor Preço</option>
+                    <option value="price-desc">Maior Preço</option>
+                </select>
+            </div>
+        </header>
+        <div class="catalog-body">
+            <aside class="filters-sidebar">
+                <h3>Filtros</h3>
+                <div class="filter-group">
+                    <h4>Marca</h4>
+                    <label><input type="checkbox" name="brand"> Marca A</label>
+                    <label><input type="checkbox" name="brand"> Marca B</label>
+                    <label><input type="checkbox" name="brand"> Marca C</label>
+                </div>
+                <div class="filter-group">
+                    <h4>Faixa de Preço</h4>
+                    <label for="price-range">Selecione a faixa de preço:</label>
+                    <input type="range" id="price-range" min="500" max="10000" step="100" title="Faixa de preço de R$ 500 a R$ 10.000">
+                    <span>R$ 500 - R$ 10.000</span>
+                </div>
+                <div class="filter-group">
+                    <h4>Tamanho do Aro</h4>
+                    <label><input type="checkbox" name="aro"> 26</label>
+                    <label><input type="checkbox" name="aro"> 27.5</label>
+                    <label><input type="checkbox" name="aro"> 29</label>
+                </div>
+                <button class="btn-primary filter-btn">Aplicar Filtros</button>
+            </aside>
+            <section class="catalog-product-grid">
+                <div class="product-card">
+                    <img src="images/capacete-ciclismo-pro1.jpg" alt="Capacete GTA Inmold Branco">
+                    <h3>Capacete GTA Inmold Branco</h3>
+                    <p class="product-price">R$ 79,90</p>
+                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/capacete-ciclismo-pro2.jpg" alt="Capacete GTA Inmold Preto">
+                    <h3>Capacete GTA Inmold Preto</h3>
+                    <p class="product-price">R$ 79,90</p>
+                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/camisa-ciclismo-performance.jpg" alt="Camisa de Ciclismo Performance">
+                    <h3>Camisa de Ciclismo Performance</h3>
+                    <p class="product-price">R$ 59,90</p>
+                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/kit-luz-led.jpg" alt="Farol Absolute 800 lumens">
+                    <h3>Farol Absolute 800 lumens</h3>
+                    <p class="product-price">R$ 69,90</p>
+                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/biciclata-prox1.jpg" alt="Luvas de Ciclismo">
+                    <h3>Luvas de Ciclismo MTB</h3>
+                    <p class="product-price">R$ 39,90</p>
+                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/biciclata-prox2.jpg" alt="Óculos de Ciclismo">
+                    <h3>Óculos de Ciclismo UV</h3>
+                    <p class="product-price">R$ 89,90</p>
+                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/bicicleta-Oggi-7.0.jpg" alt="Garrafa de Água">
+                    <h3>Garrafa de Água 750ml</h3>
+                    <p class="product-price">R$ 29,90</p>
+                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/bicicleta-Oggi-HakerHds.jpg" alt="Bomba de Ar">
+                    <h3>Bomba de Ar Manual</h3>
+                    <p class="product-price">R$ 49,90</p>
+                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/bicicleta-Oggi-HakerSport.jpg" alt="Cadeado para Bike">
+                    <h3>Cadeado U-Lock Segurança</h3>
+                    <p class="product-price">R$ 79,90</p>
+                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sobre Nós</h4>
+                    <p>Apaixonados por ciclismo, oferecemos os melhores produtos para você pedalar com segurança e estilo.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>Telefone: (84) 98818-6261</p>
+                    <p>Email: ebikestorenatal@gmail.com</p>
+                    <a href="https://wa.me/5584988186261" class="whatsapp-link" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> Fale conosco no WhatsApp
+                    </a>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 e-Bike Store. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
