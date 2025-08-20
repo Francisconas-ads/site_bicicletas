@@ -12,9 +12,13 @@ Backend/API
    GET  /health
    GET  /api/products?q=texto&category=bicicletas&sort=price-asc
    GET  /api/products/:id
+   POST /api/products { sku,name,description,price,category,brand,image_url,active }
+   PUT  /api/products/:id { sku?,name?,description?,price?,category?,brand?,image_url?,active? }
    POST /api/cart/calculate { items:[{productId,name,unitPrice,quantity}], discount }
    POST /api/orders { type: 'order'|'quote', customer:{...}, items:[...], discount }
    GET  /api/orders/:id/pdf  -> PDF inline
+   POST /api/shipping/quote { destinationZip, items:[{quantity,weightKg}] }
+   POST /api/payments/checkout { amount, method: 'credit_card'|'pix'|'boleto', card? }
 
 Numeração
 - Independente por tipo: PED-000001 para pedido e ORC-000001 para orçamento.
