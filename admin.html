@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-container{max-width:1000px;margin:30px auto;padding:20px;border:1px solid #eee;border-radius:8px;background:#fff}
+        .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+        .row-1{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:10px}
+        .input{padding:10px;border:1px solid #ddd;border-radius:6px;width:100%}
+        .btn{padding:10px 16px;border:none;border-radius:6px;cursor:pointer}
+        .btn-primary{background:#FF6600;color:#fff}
+        .btn-secondary{background:#333;color:#fff}
+        .table{width:100%;border-collapse:collapse;margin-top:20px}
+        .table th,.table td{border:1px solid #eee;padding:8px;text-align:left}
+        .right{text-align:right}
+        .login{max-width:380px;margin:60px auto}
+    </style>
+    <script>const API_BASE=(location.hostname==='localhost'||location.hostname==='127.0.0.1')?'http://localhost:3001':'';</script>
+</head>
+<body>
+    <header class="main-header"><div class="container"><a href="index.html" class="logo"><img src="images/logo.png" class="logo-image" alt=""></a><nav class="main-nav"><a href="index.html">Site</a></nav></div></header>
+    <main class="container page-content">
+        <section id="login" class="login card">
+            <h2>Login Admin</h2>
+            <input id="adm-token" class="input" placeholder="Token de administrador">
+            <button id="btn-login" class="btn btn-primary" style="margin-top:10px">Entrar</button>
+            <p style="margin-top:10px;color:#555">Defina o token em server/.env: ADMIN_TOKEN</p>
+        </section>
+        <section id="admin" class="admin-container" style="display:none">
+            <h2>Gerenciar Produtos</h2>
+            <div class="row">
+                <input id="sku" class="input" placeholder="SKU">
+                <input id="name" class="input" placeholder="Nome">
+            </div>
+            <div class="row">
+                <input id="price" class="input" placeholder="Preço (ex: 1999.90)" type="number" step="0.01">
+                <input id="category" class="input" placeholder="Categoria">
+            </div>
+            <div class="row">
+                <input id="brand" class="input" placeholder="Marca">
+                <input id="image_url" class="input" placeholder="URL da imagem">
+            </div>
+            <div class="row-1">
+                <textarea id="description" class="input" placeholder="Descrição"></textarea>
+            </div>
+            <div class="row">
+                <button id="btn-create" class="btn btn-primary">Salvar Novo</button>
+                <button id="btn-update" class="btn btn-secondary" disabled>Atualizar Selecionado</button>
+            </div>
+            <table class="table" id="grid">
+                <thead><tr><th>ID</th><th>SKU</th><th>Nome</th><th>Preço</th><th>Categoria</th><th>Marca</th><th>Ativo</th><th class="right">Ações</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+    <script src="js/admin.js"></script>
+    </body>
+    </html>
+

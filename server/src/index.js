@@ -7,6 +7,7 @@ import { cartRouter } from './routes/cart.js';
 import { ordersRouter } from './routes/orders.js';
 import { shippingRouter } from './routes/shipping.js';
 import { paymentsRouter } from './routes/payments.js';
+import { requireAdmin } from './middleware/auth.js';
 
 const app = express();
 
@@ -18,7 +19,13 @@ app.get('/health', (req, res) => {
   res.json({ ok: true });
 });
 
-app.use('/api/products', productsRouter);
+app.use('/api/products', (req, res, next) => {
+  // Protege escrita; leitura é aberta
+  if (req.method === 'POST' || req.method === 'PUT' || req.method === 'DELETE' || req.method === 'PATCH') {
+    return requireAdmin(req, res, next);
+  }
+  return productsRouter(req, res, next);
+});
 app.use('/api/cart', cartRouter);
 app.use('/api/orders', ordersRouter);
 app.use('/api/shipping', shippingRouter);
