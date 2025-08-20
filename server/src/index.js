@@ -5,6 +5,8 @@ import { createRequire } from 'module';
 import { productsRouter } from './routes/products.js';
 import { cartRouter } from './routes/cart.js';
 import { ordersRouter } from './routes/orders.js';
+import { shippingRouter } from './routes/shipping.js';
+import { paymentsRouter } from './routes/payments.js';
 
 const app = express();
 
@@ -19,6 +21,8 @@ app.get('/health', (req, res) => {
 app.use('/api/products', productsRouter);
 app.use('/api/cart', cartRouter);
 app.use('/api/orders', ordersRouter);
+app.use('/api/shipping', shippingRouter);
+app.use('/api/payments', paymentsRouter);
 
 const port = Number(process.env.APP_PORT || 3001);
 app.listen(port, () => {
