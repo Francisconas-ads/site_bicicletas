@@ -19,13 +19,17 @@ app.get('/health', (req, res) => {
   res.json({ ok: true });
 });
 
-app.use('/api/products', (req, res, next) => {
-  // Protege escrita; leitura é aberta
-  if (req.method === 'POST' || req.method === 'PUT' || req.method === 'DELETE' || req.method === 'PATCH') {
-    return requireAdmin(req, res, next);
-  }
-  return productsRouter(req, res, next);
-});
+// Produtos: criação (POST) sem token; edição/exclusão com token
+app.use(
+  '/api/products',
+  (req, res, next) => {
+    if (req.method === 'PUT' || req.method === 'DELETE' || req.method === 'PATCH') {
+      return requireAdmin(req, res, next);
+    }
+    return next();
+  },
+  productsRouter
+);
 app.use('/api/cart', cartRouter);
 app.use('/api/orders', ordersRouter);
 app.use('/api/shipping', shippingRouter);
