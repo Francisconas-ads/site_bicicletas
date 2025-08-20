@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto - Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-container{max-width:800px;margin:30px auto;padding:20px;border:1px solid #eee;border-radius:8px;background:#fff}
+        .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+        .row-1{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:10px}
+        .input{padding:10px;border:1px solid #ddd;border-radius:6px;width:100%}
+        .btn{padding:10px 16px;border:none;border-radius:6px;cursor:pointer}
+        .btn-primary{background:#FF6600;color:#fff}
+        .btn-secondary{background:#333;color:#fff}
+        .switch{display:flex;gap:10px;align-items:center}
+        .login{max-width:380px;margin:0 auto 20px auto}
+    </style>
+    <script>const API_BASE=(location.hostname==='localhost'||location.hostname==='127.0.0.1')?'http://localhost:3001':'';</script>
+</head>
+<body>
+    <header class="main-header"><div class="container"><a href="index.html" class="logo"><img src="images/logo.png" class="logo-image" alt=""></a><nav class="main-nav"><a href="admin.html">Admin</a></nav></div></header>
+    <main class="container page-content">
+        <section class="admin-container">
+            <h2>Cadastro de Novo Produto</h2>
+            <div class="login">
+                <input id="adm-token" class="input" placeholder="Token de administrador">
+                <button id="btn-lembrar" class="btn btn-secondary" style="margin-top:8px">Usar token salvo</button>
+            </div>
+            <div class="row">
+                <input id="sku" class="input" placeholder="SKU">
+                <input id="name" class="input" placeholder="Nome">
+            </div>
+            <div class="row">
+                <input id="price" class="input" placeholder="Preço (ex: 1999.90)" type="number" step="0.01">
+                <input id="category" class="input" placeholder="Categoria">
+            </div>
+            <div class="row">
+                <input id="brand" class="input" placeholder="Marca">
+                <input id="image_url" class="input" placeholder="URL da imagem">
+            </div>
+            <div class="row-1">
+                <textarea id="description" class="input" placeholder="Descrição"></textarea>
+            </div>
+            <div class="switch">
+                <input id="active" type="checkbox" checked>
+                <label for="active">Ativo</label>
+            </div>
+            <div class="row" style="margin-top:10px">
+                <button id="btn-salvar" class="btn btn-primary">Salvar Produto</button>
+                <button id="btn-limpar" class="btn btn-secondary" type="button">Limpar</button>
+            </div>
+        </section>
+    </main>
+    <script src="js/cadastroProduto.js"></script>
+</body>
+</html>
+
