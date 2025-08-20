@@ -22,12 +22,12 @@
             </nav>
             <div class="header-icons">
                 <div class="search-box">
-                    <input type="search" placeholder="Buscar produto...">
-                    <button type="submit" title="Buscar produto">
+                    <input id="global-search" type="search" placeholder="Buscar produto...">
+                    <button id="global-search-btn" type="button" title="Buscar produto">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
-                <a href="#" class="icon-link">
+                <a href="pedido.html" class="icon-link">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
             </div>
@@ -68,62 +68,7 @@
                 </div>
                 <button class="btn-primary filter-btn">Aplicar Filtros</button>
             </aside>
-            <section class="catalog-product-grid">
-                <div class="product-card">
-                    <img src="images/biciclata-prox1.jpg" alt="Bicicleta Mountain Bike">
-                    <h3>Bicicleta Pro-X Aro 20 Aero</h3>
-                    <p class="product-price">R$ 799,90</p>
-                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
-                </div>
-                <div class="product-card">
-                    <img src="images/biciclata-prox2.jpg" alt="Bicicleta Urbana">
-                    <h3>Bicicleta Pro-X Aro 20 Aero</h3>
-                    <p class="product-price">R$ 799,90</p>
-                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
-                </div>
-                <div class="product-card">
-                    <img src="images/bicicleta-Oggi-7.0.jpg" alt="Bicicleta Elétrica">
-                    <h3>Bicicleta Oggi 7.0</h3>
-                    <p class="product-price">R$ 3.299,00</p>
-                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
-                </div>
-                <div class="product-card">
-                    <img src="images/bicicleta-Oggi-HakerHds.jpg" alt="Bicicleta Ogg Hacker Hds">
-                    <h3>Bicicleta Ogg Hacker Hds</h3>
-                    <p class="product-price">R$ 2,699,00</p>
-                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
-                </div>
-                <div class="product-card">
-                    <img src="images/bicicleta-Oggi-HakerSport.jpg" alt="Bicicleta Ogg Hacker Sport">
-                    <h3>Bicicleta Ogg Hacker Sport</h3>
-                    <p class="product-price">R$ 2.199,00</p>
-                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
-                </div>
-                <div class="product-card">
-                    <img src="images/camisa-ciclismo-performance.jpg" alt="Camisa de Ciclismo">
-                    <h3>Camisa Ciclismo</h3>
-                    <p class="product-price">R$ 59,90</p>
-                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
-                </div>
-                <div class="product-card">
-                    <img src="images/capacete-ciclismo-pro1.jpg" alt="Capacete GTA Inmold Branco">
-                    <h3>Capacete GTA Inmold Branco</h3>
-                    <p class="product-price">R$ 79,90</p>
-                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
-                </div>
-                <div class="product-card">
-                    <img src="images/capacete-ciclismo-pro2.jpg" alt="Capacete GTA Inmold Preto">
-                    <h3>Capacete GTA Inmold Preto</h3>
-                    <p class="product-price">R$ 79,90</p>
-                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
-                </div>
-                <div class="product-card">
-                    <img src="images/kit-luz-led.jpg" alt="Farol Absolute 800 lumens">
-                    <h3>Farol Absolute 800 lumens</h3>
-                    <p class="product-price">R$ 69,90</p>
-                    <a href="produto.html" class="btn-secondary">Ver Detalhes</a>
-                </div>
-            </section>
+            <section id="catalog-grid" class="catalog-product-grid"></section>
         </div>
     </main>
     <footer class="main-footer">
@@ -155,5 +100,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/app.js"></script>
+    <script src="js/catalogo.js"></script>
 </body>
 </html>
