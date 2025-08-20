@@ -8,22 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header class="main-header"><div class="container"><a href="index.html" class="logo"><img src="images/logo.png" alt="e-Bike Store - Logo da empresa" class="logo-image"></a><nav class="main-nav"><a href="catalogoBicicletas.html">Bicicletas</a><a href="catalogoPecas.html">Peças</a><a href="catalogoAcessorios.html">Acessórios</a><a href="blog.html">Blog</a><a href="quemsomos.html">Quem Somos</a></nav><div class="header-icons"><div class="search-box"><input type="search" placeholder="Buscar produto..."><button type="submit" title="Buscar produto"><i class="fas fa-search"></i></button></div><a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i></a></div></div></header>
+    <header class="main-header"><div class="container"><a href="index.html" class="logo"><img src="images/logo.png" alt="e-Bike Store - Logo da empresa" class="logo-image"></a><nav class="main-nav"><a href="catalogoBicicletas.html">Bicicletas</a><a href="catalogoPecas.html">Peças</a><a href="catalogoAcessorios.html">Acessórios</a><a href="blog.html">Blog</a><a href="quemsomos.html">Quem Somos</a></nav><div class="header-icons"><div class="search-box"><input id="global-search" type="search" placeholder="Buscar produto..."><button id="global-search-btn" type="button" title="Buscar produto"><i class="fas fa-search"></i></button></div><a href="pedido.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a></div></div></header>
     <main class="container page-content">
         <div class="product-details-layout">
             <section class="product-gallery">
-                <div class="main-image"><img src="images/proX1.jpeg" alt="Bicicleta Pro-X Aro 20 Aero"></div>
-                <div class="thumbnail-images"><img src="images/proX1.jpeg" alt="Bicicleta Pro-X - Vista frontal" class="active"><img src="images/proX2.jpeg" alt="Bicicleta Pro-X - Vista lateral"><img src="images/proX3.jpeg" alt="Bicicleta Pro-X - Detalhe do quadro"><img src="images/proX4.jpeg" alt="Bicicleta Pro-X - Detalhe da roda"></div>
+                <div class="main-image"><img id="prod-image" src="images/logo.png" alt=""></div>
             </section>
             <section class="product-info">
-                <h1>Bicicleta Pro-X Aro 20 Aero</h1>
-                <p class="product-page-price">R$ 799,90</p>
-                <p class="product-description">A Bicicleta Pro-X Aro 20 Aero é perfeita para crianças e adolescentes que buscam diversão e aventura. Com quadro resistente, design moderno e cores vibrantes, ela garante segurança e conforto para os pequenos ciclistas.</p>
-                <div class="purchase-actions"><div class="quantity-selector"><label for="qty">Quantidade:</label><input type="number" id="qty" value="1" min="1"></div><button class="btn-primary add-to-cart-btn">Adicionar ao Carrinho</button></div>
-                <div class="product-specs">
-                    <h3>Especificações Técnicas</h3>
-                    <ul><li><strong>Quadro:</strong> Aço carbono resistente</li><li><strong>Suspensão:</strong> Rígida (sem suspensão)</li><li><strong>Câmbio:</strong> Monomarcha</li><li><strong>Freios:</strong> V-Brake traseiro</li><li><strong>Aro:</strong> 20 polegadas</li><li><strong>Peso:</strong> 8.5 kg</li><li><strong>Idade recomendada:</strong> 6 a 12 anos</li></ul>
-                </div>
+                <h1 id="prod-name">Produto</h1>
+                <p id="prod-price" class="product-page-price">R$ 0,00</p>
+                <p id="prod-desc" class="product-description"></p>
+                <div class="purchase-actions"><div class="quantity-selector"><label for="qty">Quantidade:</label><input type="number" id="qty" value="1" min="1"></div><button id="btn-add" class="btn-primary add-to-cart-btn">Adicionar ao Carrinho</button></div>
             </section>
         </div>
     </main>
@@ -33,5 +28,7 @@
         <div class="review"><div class="review-header"><strong>Maria Oliveira</strong><span class="stars">★★★★★</span></div><p>Excelente custo-benefício. Perfeita para as trilhas de fim de semana. Recomendo!</p></div>
     </section>
     <footer class="main-footer"><div class="container"><div class="footer-content"><div class="footer-section"><h4>Sobre Nós</h4><p>Apaixonados por ciclismo, oferecemos os melhores produtos para você pedalar com segurança e estilo.</p></div><div class="footer-section"><h4>Contato</h4><p>Telefone: (84) 98818-6261</p><p>Email: ebikestorenatal@gmail.com</p><a href="https://wa.me/5584988186261" class="whatsapp-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Fale conosco no WhatsApp</a></div><div class="footer-section"><h4>Redes Sociais</h4><div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div></div><div class="footer-bottom"><p>&copy; 2025 e-Bike Store. Todos os direitos reservados.</p></div></div></footer>
+    <script src="js/app.js"></script>
+    <script src="js/produto.js"></script>
 </body>
 </html>

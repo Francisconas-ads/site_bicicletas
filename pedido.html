@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho e Checkout - e-Bike Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .checkout-grid{display:grid;grid-template-columns:2fr 1fr;gap:30px;margin-top:30px}
+        .card{background:#fff;border:1px solid #eee;border-radius:8px;padding:20px}
+        .cart-item{display:grid;grid-template-columns:80px 1fr auto auto;gap:15px;align-items:center;border-bottom:1px solid #f4f4f4;padding:10px 0}
+        .cart-item img{width:80px;height:60px;object-fit:cover;border-radius:6px}
+        .qty-input{width:70px;padding:8px;text-align:center}
+        .summary-row{display:flex;justify-content:space-between;margin:8px 0}
+        .summary-row.total{font-weight:bold;font-size:18px}
+        .actions{display:flex;gap:10px;margin-top:15px}
+        .inline{display:flex;gap:10px;align-items:center}
+        .input{padding:10px;border:1px solid #ddd;border-radius:6px;width:100%}
+        .two-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    </style>
+    <script>
+        const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:3001' : '';
+    </script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="e-Bike Store - Logo da empresa" class="logo-image">
+            </a>
+            <nav class="main-nav">
+                <a href="catalogoBicicletas.html">Bicicletas</a>
+                <a href="catalogoPecas.html">Peças</a>
+                <a href="catalogoAcessorios.html">Acessórios</a>
+                <a href="blog.html">Blog</a>
+                <a href="quemsomos.html">Quem Somos</a>
+            </nav>
+            <div class="header-icons">
+                <div class="search-box">
+                    <input id="global-search" type="search" placeholder="Buscar produto...">
+                    <button id="global-search-btn" type="button" title="Buscar produto">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <a href="pedido.html" class="icon-link" aria-label="Carrinho de compras">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="container page-content">
+        <header class="catalog-header">
+            <h1>Meu Carrinho</h1>
+        </header>
+        <div class="checkout-grid">
+            <section class="card">
+                <div id="cart-items"></div>
+            </section>
+            <aside class="card">
+                <h3>Resumo</h3>
+                <div class="summary-row"><span>Subtotal</span><strong id="sum-subtotal">R$ 0,00</strong></div>
+                <div class="summary-row"><span>Desconto</span><strong id="sum-discount">R$ 0,00</strong></div>
+                <div class="summary-row total"><span>Total</span><strong id="sum-total">R$ 0,00</strong></div>
+                <div class="actions">
+                    <button id="btn-orcamento" class="btn-secondary">Gerar Orçamento (PDF)</button>
+                    <button id="btn-pedido" class="btn-primary">Finalizar Pedido (PDF)</button>
+                </div>
+            </aside>
+        </div>
+        <section class="card" style="margin-top:20px">
+            <h3>Dados do Cliente</h3>
+            <div class="two-cols">
+                <input id="cli-name" class="input" placeholder="Nome completo" autocomplete="name">
+                <input id="cli-email" class="input" placeholder="E-mail" autocomplete="email">
+            </div>
+            <div class="two-cols" style="margin-top:10px">
+                <input id="cli-doc" class="input" placeholder="CPF/CNPJ">
+                <input id="cli-phone" class="input" placeholder="Telefone">
+            </div>
+            <input id="cli-addr" class="input" placeholder="Endereço completo" style="margin-top:10px">
+            <div class="inline" style="margin-top:10px">
+                <span>Desconto R$</span>
+                <input id="discount" class="input" style="max-width:140px" value="0">
+                <button id="btn-recalcular" class="btn-secondary">Recalcular</button>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 e-Bike Store. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="js/masks.js"></script>
+    <script src="js/carrinho.js"></script>
+</body>
+</html>
+

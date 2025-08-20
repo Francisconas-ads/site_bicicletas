@@ -1,5 +1,27 @@
 # e-Bike Store - Projeto de E-commerce de Bicicletas
 
+Backend/API
+1) Suba MySQL e API com Docker:
+   docker compose up -d
+
+2) Configure o banco (migrations) e dados de exemplo (seed):
+   docker compose exec api node src/db/migrate.js
+   docker compose exec api node src/db/seed.js
+
+3) Endpoints principais:
+   GET  /health
+   GET  /api/products?q=texto&category=bicicletas&sort=price-asc
+   GET  /api/products/:id
+   POST /api/cart/calculate { items:[{productId,name,unitPrice,quantity}], discount }
+   POST /api/orders { type: 'order'|'quote', customer:{...}, items:[...], discount }
+   GET  /api/orders/:id/pdf  -> PDF inline
+
+Numeração
+- Independente por tipo: PED-000001 para pedido e ORC-000001 para orçamento.
+
+Máscaras BR (frontend)
+- Aplicar máscaras de CPF/CNPJ, CEP, telefone no formulário de checkout; valores R$ no UI.
+
 ## 1. Descrição do Projeto
 
 Este é o código-fonte de um site de e-commerce moderno e responsivo para uma loja de bicicletas e acessórios chamada "e-Bike Store". O projeto foi desenvolvido com base em um prompt detalhado, focando em uma experiência de usuário limpa, navegação intuitiva e um design que valoriza imagens de alta qualidade para inspirar o estilo de vida do ciclismo.
