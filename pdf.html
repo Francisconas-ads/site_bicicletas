@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Documento - e-Bike Store</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="assets/app.js"></script>
+    <style>
+      .pdf-wrap { max-width: 900px; margin: 20px auto; }
+      iframe { width: 100%; height: 85vh; border: 1px solid #ccc; border-radius: 6px; }
+    </style>
+</head>
+<body class="page-pdf">
+	<header class="main-header">
+		<div class="container">
+			<a href="index.html" class="logo">
+				<img src="images/logo.png" alt="e-Bike Store - Logo da empresa" class="logo-image">
+			</a>
+			<nav class="main-nav">
+				<a href="catalogoBicicletas.html">Bicicletas</a>
+				<a href="catalogoPecas.html">Peças</a>
+				<a href="catalogoAcessorios.html">Acessórios</a>
+				<a href="blog.html">Blog</a>
+				<a href="quemsomos.html">Quem Somos</a>
+			</nav>
+			<div class="header-icons">
+				<div class="search-box">
+					<input type="search" placeholder="Buscar produto...">
+					<button type="submit" title="Buscar produto">
+						<i class="fas fa-search"></i>
+					</button>
+				</div>
+				<a href="carrinho.html" class="icon-link" aria-label="Carrinho de compras">
+					<i class="fas fa-shopping-cart" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</header>
+	<main class="container page-content">
+		<nav class="breadcrumb" aria-label="Breadcrumb">
+			<ol>
+				<li><a href="index.html">Início</a></li>
+				<li aria-current="page">Documento</li>
+			</ol>
+		</nav>
+		<section class="pdf-wrap">
+			<iframe id="pdf-frame" title="Documento"></iframe>
+		</section>
+	</main>
+	<footer class="main-footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-section"><h4>Sobre Nós</h4><p>Apaixonados por ciclismo, oferecemos os melhores produtos para você pedalar com segurança e estilo.</p></div>
+				<div class="footer-section"><h4>Contato</h4><p>Telefone: (84) 98818-6261</p><p>Email: ebikestorenatal@gmail.com</p><a href="https://wa.me/5584988186261" class="whatsapp-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Fale conosco no WhatsApp</a></div>
+				<div class="footer-section"><h4>Redes Sociais</h4><div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+			</div>
+			<div class="footer-bottom"><p>&copy; 2025 e-Bike Store. Todos os direitos reservados.</p></div>
+		</div>
+	</footer>
+</body>
+</html>
+
