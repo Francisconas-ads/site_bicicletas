@@ -101,3 +101,22 @@ Siga estes passos para rodar o site em seu computador local (`localhost`).
 - O navegador irá carregar o arquivo `index.html` automaticamente e a página inicial do site será exibida.
 
 **Pronto!** O site "e-Bike Store" está agora rodando em seu ambiente local. Você pode navegar por todas as páginas clicando nos links do menu.
+
+## 6. Acesso ao painel administrativo (admin.html)
+
+- Abra o arquivo `admin.html` no navegador.
+- Informe o token de administrador na tela de login e clique em “Entrar”.
+- O token é validado via header `Authorization: Bearer <token>`.
+
+Configuração do token:
+- Crie o arquivo `server/.env` (pode copiar de `server/.env.example`) e defina:
+```
+ADMIN_TOKEN=seu-token-forte
+```
+- Reinicie a API para aplicar o token.
+
+Uso do painel:
+- Para cadastrar um produto, preencha os campos (SKU, Nome, Preço, etc.) e clique em “Salvar Novo”.
+- Para editar, clique em “Editar” na linha do produto, ajuste os campos e clique em “Atualizar Selecionado”.
+- A listagem de produtos é carregada de `GET /api/products`.
+- As operações de escrita usam `POST /api/products` e `PUT /api/products/:id` e exigem o token.
